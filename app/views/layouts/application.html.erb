@@ -31,7 +31,11 @@
     </header>
 
     <!-- Content -->
-    <div class="content">
+    <% if current_page?(root_path) %>
+      <div class="content">
+    <% else %>
+      <div class="content_other">
+    <% end %>
       <%= yield %>
     </div>
 

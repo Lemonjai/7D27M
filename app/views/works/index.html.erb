@@ -1,5 +1,6 @@
 <div id="posts_wrapper" class="skinny_wrapper">
 
+  <% if @works != nil %>
   <% @works.each do |work| %>
     <div class="post">
       <p class="date"><%= work.created_at.strftime("%A, %B %d") %></p>
@@ -16,4 +17,11 @@
     <a href="#" rel="next">2</a>
     <a href="#" class="next_page">Next -></a>
    </div>
+   
+  <% else %>
+    <div class="post">
+      <h2>Please add work experience</h2>
+      <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe , new_work_path %>
+    </div>
+  <% end %>
 </div>
