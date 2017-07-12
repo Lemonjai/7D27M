@@ -105,15 +105,11 @@ hr{
   border-bottom: 2px solid $highlight;
 }
 
-@media only screen and (max-width: 1023px) {
-  
-}
-
 @import 'navigation';
 @import 'footer';
 @import 'normalise';
-// @import 'main';
-// @import 'contact';
-// @import 'about';
-// @import 'project';
-// @import 'pagination';
+@import 'main';
+@import 'contact';
+@import 'about';
+@import 'project';
+@import 'pagination';
